@@ -1,0 +1,7 @@
+<WorldCreator Version="2.0">
+  <Textures Preview="preview.png" Tags="desert;sand;dry" Description="" Publisher="GameTextures" Website="https://www.gametextures.com/" Guid="e8e17feb-16cf-444a-94ea-607e96b2ed01">
+    <Diffuse File="ground_desertSandSmallDunes_col.png" Time="131899102420000000" />
+    <Normal File="ground_desertSandSmallDunes_norm.png" Time="131899105220000000" />
+    <Displacement File="" Time="133221340871666927" />
+  </Textures>
+</WorldCreator>
