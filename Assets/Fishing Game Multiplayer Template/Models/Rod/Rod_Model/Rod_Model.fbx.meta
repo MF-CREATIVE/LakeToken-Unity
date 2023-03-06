@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 1f2adb13e8b3079428424759ce7c7f6a
+timeCreated: 1532948627
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: locator10_1
+    100002: locator10_2
+    100004: locator1_1
+    100006: locator1_2
+    100008: locator1_3
+    100010: locator1_4
+    100012: locator1_5
+    100014: locator1_6
+    100016: locator1_7
+    100018: locator1_8
+    100020: locator2_1
+    100022: locator2_2
+    100024: locator3_1
+    100026: locator3_2
+    100028: locator4_1
+    100030: locator4_2
+    100032: locator5_1
+    100034: locator5_2
+    100036: locator6_1
+    100038: locator6_2
+    100040: locator7_1
+    100042: locator7_2
+    100044: locator8_1
+    100046: locator8_2
+    100048: locator9_1
+    100050: locator9_2
+    100052: rivertexZeus
+    100054: //RootNode
+    100056: rivertexZeus 1
+    100058: rivertexZeus_0
+    100060: rod01
+    100062: rod02
+    100064: rod03
+    100066: rod04
+    100068: rod05
+    100070: rod06
+    100072: rod07
+    100074: rod08
+    100076: rod09
+    100078: rod10
+    100080: root
+    400000: locator10_1
+    400002: locator10_2
+    400004: locator1_1
+    400006: locator1_2
+    400008: locator1_3
+    400010: locator1_4
+    400012: locator1_5
+    400014: locator1_6
+    400016: locator1_7
+    400018: locator1_8
+    400020: locator2_1
+    400022: locator2_2
+    400024: locator3_1
+    400026: locator3_2
+    400028: locator4_1
+    400030: locator4_2
+    400032: locator5_1
+    400034: locator5_2
+    400036: locator6_1
+    400038: locator6_2
+    400040: locator7_1
+    400042: locator7_2
+    400044: locator8_1
+    400046: locator8_2
+    400048: locator9_1
+    400050: locator9_2
+    400052: //RootNode
+    400054: rivertexZeus
+    400056: rivertexZeus 1
+    400058: rivertexZeus_0
+    400060: rod01
+    400062: rod02
+    400064: rod03
+    400066: rod04
+    400068: rod05
+    400070: rod06
+    400072: rod07
+    400074: rod08
+    400076: rod09
+    400078: rod10
+    400080: root
+    4300000: rivertexZeus_0
+    9500000: //RootNode
+    13700000: rivertexZeus_0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

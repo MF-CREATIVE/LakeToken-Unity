@@ -1,0 +1,5 @@
+newmtl Cheese_Material
+map_Kd Cheese_Texture.PNG
+Kd 1 1 1
+d 1
+

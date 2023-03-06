@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: bf393e594f9a6d845b29ebfcb449d4f4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Hook
+    100002: Hook__1_
+    100004: Hook__2_
+    100006: Hook_Clone_
+    100008: Hook_Clone__1
+    100010: Hook_Clone__2
+    100012: Hook_Clone__Clone_
+    100014: Hook_Clone__Clone__1
+    100016: Hook_Clone__Clone__2
+    100018: Hook_Clone__Clone__Clone_
+    100020: Hook_Clone__Clone__Clone__1
+    100022: Hook_Clone__Clone__Clone__2
+    100024: //RootNode
+    100026: Spinner_Body
+    100028: Spinner_Front
+    400000: Hook
+    400002: Hook__1_
+    400004: Hook__2_
+    400006: Hook_Clone_
+    400008: Hook_Clone__1
+    400010: Hook_Clone__2
+    400012: Hook_Clone__Clone_
+    400014: Hook_Clone__Clone__1
+    400016: Hook_Clone__Clone__2
+    400018: Hook_Clone__Clone__Clone_
+    400020: Hook_Clone__Clone__Clone__1
+    400022: Hook_Clone__Clone__Clone__2
+    400024: //RootNode
+    400026: Spinner_Body
+    400028: Spinner_Front
+    2100000: Spinner_Body_Material
+    2100002: Spinner_DOwn_Material
+    2100004: Spinner_Body_Up_Material
+    2100006: Spinnr_Front_Plastic_Material
+    2100008: Hook_Material
+    2300000: Hook
+    2300002: Hook__1_
+    2300004: Hook__2_
+    2300006: Hook_Clone_
+    2300008: Hook_Clone__1
+    2300010: Hook_Clone__2
+    2300012: Hook_Clone__Clone_
+    2300014: Hook_Clone__Clone__1
+    2300016: Hook_Clone__Clone__2
+    2300018: Hook_Clone__Clone__Clone_
+    2300020: Hook_Clone__Clone__Clone__1
+    2300022: Hook_Clone__Clone__Clone__2
+    2300024: Spinner_Body
+    2300026: Spinner_Front
+    3300000: Hook
+    3300002: Hook__1_
+    3300004: Hook__2_
+    3300006: Hook_Clone_
+    3300008: Hook_Clone__1
+    3300010: Hook_Clone__2
+    3300012: Hook_Clone__Clone_
+    3300014: Hook_Clone__Clone__1
+    3300016: Hook_Clone__Clone__2
+    3300018: Hook_Clone__Clone__Clone_
+    3300020: Hook_Clone__Clone__Clone__1
+    3300022: Hook_Clone__Clone__Clone__2
+    3300024: Spinner_Body
+    3300026: Spinner_Front
+    4300000: Spinner_Body
+    4300002: Spinner_Front
+    4300004: Hook
+    4300006: Hook_Clone_
+    4300008: Hook_Clone__Clone_
+    4300010: Hook_Clone__Clone__Clone_
+    4300012: Hook__1_
+    4300014: Hook_Clone__1
+    4300016: Hook_Clone__Clone__1
+    4300018: Hook_Clone__Clone__Clone__1
+    4300020: Hook__2_
+    4300022: Hook_Clone__2
+    4300024: Hook_Clone__Clone__2
+    4300026: Hook_Clone__Clone__Clone__2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
