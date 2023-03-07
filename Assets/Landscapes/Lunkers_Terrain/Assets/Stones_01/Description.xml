@@ -1,7 +1,0 @@
-<WorldCreator Version="2.0">
-  <Textures Preview="preview.png" Tags="rocky;stones;river" Description="" Publisher="GameTextures" Website="https://www.gametextures.com/" Guid="85bc869e-0bdb-40b3-af73-0c4903141c5c">
-    <Diffuse File="Ground_StonesSmooth1_col.png" Time="131899102580000000" />
-    <Normal File="Ground_StonesSmooth1_norm.png" Time="131899105300000000" />
-    <Displacement File="" Time="133221340870863913" />
-  </Textures>
-</WorldCreator>
