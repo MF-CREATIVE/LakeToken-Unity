@@ -1,3 +1,3 @@
-# lunker_ICON
+# LakeToken
 
 Here comes the README
