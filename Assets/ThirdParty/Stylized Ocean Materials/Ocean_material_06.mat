@@ -85,22 +85,22 @@ Material:
     - _EdgeFoamLevel: 1.08
     - _EdgeFoamLevelDestination: 2.1
     - _EdgeFoamPower: 1
-    - _FoamOpacity: 0
+    - _FoamOpacity: 0.114
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _Noiselevel: 0.0194
+    - _Noiselevel: 0.0268
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaterDepth: 25
-    - _WaterOpacity: 0.498
-    - _WaterOrientation: 1.7
+    - _WaterDepth: 30
+    - _WaterOpacity: 0.892
+    - _WaterOrientation: 1.81
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
