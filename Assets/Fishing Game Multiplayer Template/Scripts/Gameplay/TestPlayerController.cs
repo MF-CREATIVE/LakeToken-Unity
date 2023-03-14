@@ -57,7 +57,7 @@ public class TestPlayerController : NetworkBehaviour {
 
 		Vector3 velocity = transform.forward * inputDir.y + transform.right * inputDir.x;
 		velocity *= Input.GetKey(KeyCode.LeftShift) ? _runSpeed : _walkSpeed;
-
+        velocity.y = Physics.gravity.y/10;
 		_cController.Move(velocity * Time.fixedDeltaTime);
 	}
 
