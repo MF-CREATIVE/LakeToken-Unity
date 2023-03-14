@@ -36,7 +36,7 @@ MonoBehaviour:
     value: 0.675
   vignette:
     overrideState: 1
-    value: 0.656
+    value: 0.75
 --- !u!114 &-766841422205002544
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -58,7 +58,7 @@ MonoBehaviour:
     value: 1
   aperture:
     overrideState: 1
-    value: 6.4
+    value: 6.3
   focalLength:
     overrideState: 1
     value: 28
@@ -100,7 +100,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 0.75
   threshold:
     overrideState: 1
     value: 0
@@ -111,8 +111,8 @@ MonoBehaviour:
     overrideState: 0
     value: 65472
   diffusion:
-    overrideState: 0
-    value: 7
+    overrideState: 1
+    value: 6.5
   anamorphicRatio:
     overrideState: 1
     value: -0.411
@@ -184,7 +184,7 @@ MonoBehaviour:
     overrideState: 1
     value: -6.7
   tint:
-    overrideState: 1
+    overrideState: 0
     value: 0
   colorFilter:
     overrideState: 0

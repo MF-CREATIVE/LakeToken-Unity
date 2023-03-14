@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.41960788, g: 0.4784314, b: 0.627451, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.00165
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 300106542}
   m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -1491,6 +1491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300106543}
   - component: {fileID: 300106542}
+  - component: {fileID: 300106544}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1575,6 +1576,32 @@ Transform:
   m_Father: {fileID: 744788199}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &300106544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300106541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9e0874fd8dec94d89407c74ca860e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRate: 1
+  day: 1
+  defaultFogColor: {r: 0, g: 0, b: 0, a: 0}
+  directionalLight: {fileID: 300106542}
+  angleColorPairs:
+  - angle: 1
+    color: {r: 1, g: 0.88981134, b: 0.6556604, a: 0}
+  - angle: 100
+    color: {r: 0.41960788, g: 0.4784314, b: 0.627451, a: 0}
+  - angle: 175
+    color: {r: 1, g: 0.7005151, b: 0.6273585, a: 0}
+  - angle: 250
+    color: {r: 0, g: 0, b: 0, a: 0}
+  transitionDuration: 5
 --- !u!1 &318748258
 GameObject:
   m_ObjectHideFlags: 0
