@@ -18,7 +18,8 @@ public enum Chain
     Arbitrum = 42161,
     ArbitrumGoerli = 421613,
     Binance = 56,
-    BinanceTestnet = 97
+    BinanceTestnet = 97,
+    Artic = 553
 }
 
 public class ThirdwebManager : MonoBehaviour
@@ -43,6 +44,7 @@ public class ThirdwebManager : MonoBehaviour
         {Chain.ArbitrumGoerli, "arbitrum-goerli"},
         {Chain.Binance, "binance"},
         {Chain.BinanceTestnet, "binance-testnet"},
+        {Chain.Artic, "artic-testnet"},
     };
 
     public ThirdwebSDK SDK;
@@ -56,9 +58,11 @@ public class ThirdwebManager : MonoBehaviour
         else
             Destroy(this.gameObject);
 
+        //ThirdwebSDK.Options options = new ThirdwebSDK.Options();
+        //SDK = new ThirdwebSDK("https://snow-rpc.icenetwork.io:9933", options);
+
 #if !UNITY_EDITOR
         SDK = new ThirdwebSDK(chainIdentifiers[chain]);
 #endif
     }
-
 }

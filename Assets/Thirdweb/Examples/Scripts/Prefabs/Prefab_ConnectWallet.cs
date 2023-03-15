@@ -5,6 +5,7 @@ using System;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public enum Wallet
 {
@@ -66,6 +67,16 @@ public class Prefab_ConnectWallet : MonoBehaviour
 
 
     // UI Initialization
+    public GameObject connectedState;
+    public GameObject disconnectedState;
+    public static int selectedBait;
+    private Contract contractCollection;
+    private Contract contractMarketplace;
+    private Contract contractEditionDrop;
+    public GameObject bait0;
+    public GameObject bait1;
+    public GameObject bait2;
+    public GameObject bait3;
 
     private void Start()
     {
@@ -118,6 +129,10 @@ public class Prefab_ConnectWallet : MonoBehaviour
             if (OnConnectedCallback != null)
                 OnConnectedCallback.Invoke();
             print($"Connected successfully to: {address}");
+
+            ShowConnectedState();
+            GetAllContracts();
+            ShowMarketPlace();
         }
         catch (Exception e)
         {
@@ -150,6 +165,12 @@ public class Prefab_ConnectWallet : MonoBehaviour
 
     }
 
+    private void ShowConnectedState()
+    {
+        disconnectedState.SetActive(false);
+        connectedState.SetActive(true);
+    }
+
     // Disconnecting
 
     public async void OnDisconnect()
@@ -176,10 +197,79 @@ public class Prefab_ConnectWallet : MonoBehaviour
         connectedButton.SetActive(false);
         connectDropdown.SetActive(false);
         connectedDropdown.SetActive(false);
+
+        DisconnectedState();
+    }
+
+    private void DisconnectedState()
+    {
+        connectedState.SetActive(false);
+        disconnectedState.SetActive(true);
+    }
+
+    private void GetAllContracts()
+    {
+        // Get the NFT collection contract
+        contractCollection = ThirdwebManager.Instance.SDK.GetContract("0x2eD61F881870268b4049007E4EbD49461ACe8558");
+
+        // Get the Marketplace contract
+        contractMarketplace = ThirdwebManager.Instance.SDK.GetContract("0xaDA3a2b9E4B61669B79D425d11434d739B7cFFd0");
+
+        // Get the Edition Drop
+        contractEditionDrop = ThirdwebManager.Instance.SDK.GetContract("0x2cD6d09a9c8f09821BB7188bf008DF529afB2D7E");
+    }
+
+    private async void ShowMarketPlace()
+    {
+        // First, check to see if the you own the NFT
+        List<NFT> owned = await contractCollection.ERC1155.GetOwned();
+
+        //Check to see if you own an NFT from the collection
+        //CheckIfOwned(bait0, owned, 6, "3");
+        CheckIfOwned(bait1, owned, 0, "0");
+        CheckIfOwned(bait2, owned, 1, "1");
+        CheckIfOwned(bait3, owned, 2, "2");
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadSceneAsync("Jays Level");
+    }
+
+    // Check if player already owns any of the NFTs
+    public async void CheckIfOwned(GameObject obj, List<NFT> NftOwned, int st, string token)
+    {
+        // if ownedNFTs contains a token with the same ID as the listing, then you own it
+        //bool ownNFT = NftOwned.Exists(nft => nft.metadata.id == st.ToString());
+        bool ownNFT = NftOwned.Exists(nft => nft.metadata.id == token);
+
+        if (ownNFT)
+        {
+            // Apply the condition for owning the NFT
+            var text1 = obj.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+            text1.text = "Play the game";
+
+            //Set the on click to start the game by loading mane scene
+            obj.GetComponent<UnityEngine.UI.Button>().onClick.SetPersistentListenerState(0, UnityEngine.Events.UnityEventCallState.Off);
+            obj.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() =>
+            {
+                selectedBait = st;
+                SceneManager.LoadSceneAsync("Jays Level");
+            });
+        }
+        else
+        {
+            // Once we have the price, we update the text to the price
+            var price = await contractMarketplace.marketplace.GetListing(st.ToString());
+
+            // Set the price in the button to buy
+            var text1 = obj.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+            text1.text = "Buy:" + " " + price.buyoutCurrencyValuePerToken.displayValue +
+                " " + price.buyoutCurrencyValuePerToken.symbol;
+        }
     }
 
     // Switching Network
-
     public async void OnSwitchNetwork(Chain _chain)
     {
 
