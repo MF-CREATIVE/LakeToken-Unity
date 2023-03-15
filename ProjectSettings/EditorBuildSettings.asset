@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Login.unity
     guid: fea1c348461f4ab42a22ebcf0011eee5
   - enabled: 1
-    path: Assets/Thirdweb/Examples/Scenes/Scene_Prefabs.unity
-    guid: bd374468f6e2ace4c81d8f34ac8672ca
+    path: Assets/Scenes/Jays_Level.unity
+    guid: 5ab872589b2b82b419c4a079c3b18e09
   m_configObjects: {}

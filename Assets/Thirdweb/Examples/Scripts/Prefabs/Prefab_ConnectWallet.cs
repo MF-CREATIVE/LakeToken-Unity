@@ -77,6 +77,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
     public GameObject bait1;
     public GameObject bait2;
     public GameObject bait3;
+    private List<NFT> owned;
 
     private void Start()
     {
@@ -213,7 +214,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
         contractCollection = ThirdwebManager.Instance.SDK.GetContract("0x2eD61F881870268b4049007E4EbD49461ACe8558");
 
         // Get the Marketplace contract
-        contractMarketplace = ThirdwebManager.Instance.SDK.GetContract("0xaDA3a2b9E4B61669B79D425d11434d739B7cFFd0");
+        contractMarketplace = ThirdwebManager.Instance.SDK.GetContract("0xaa545c6b2dd42a59056d17B5D7382e55e9b23216");
 
         // Get the Edition Drop
         contractEditionDrop = ThirdwebManager.Instance.SDK.GetContract("0x2cD6d09a9c8f09821BB7188bf008DF529afB2D7E");
@@ -222,7 +223,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
     private async void ShowMarketPlace()
     {
         // First, check to see if the you own the NFT
-        List<NFT> owned = await contractCollection.ERC1155.GetOwned();
+        owned = await contractCollection.ERC1155.GetOwned();
 
         //Check to see if you own an NFT from the collection
         //CheckIfOwned(bait0, owned, 6, "3");
@@ -233,7 +234,8 @@ public class Prefab_ConnectWallet : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadSceneAsync("Jays Level");
+        selectedBait = 0;
+        SceneManager.LoadSceneAsync("Jays_Level");
     }
 
     // Check if player already owns any of the NFTs
@@ -254,7 +256,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
             obj.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() =>
             {
                 selectedBait = st;
-                SceneManager.LoadSceneAsync("Jays Level");
+                SceneManager.LoadSceneAsync("Jays_Level");
             });
         }
         else
@@ -264,9 +266,48 @@ public class Prefab_ConnectWallet : MonoBehaviour
 
             // Set the price in the button to buy
             var text1 = obj.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-            text1.text = "Buy:" + " " + price.buyoutCurrencyValuePerToken.displayValue +
-                " " + price.buyoutCurrencyValuePerToken.symbol;
+            text1.text = "Buy:" + " " + price.buyoutCurrencyValuePerToken.displayValue + " " + price.buyoutCurrencyValuePerToken.symbol;
         }
+    }
+
+    public async void BuyNFT(string tokenId)
+    {
+        Debug.Log("Buy button clicked");
+
+        Marketplace marketplace = contractMarketplace.marketplace;
+
+        try
+        {
+            TransactionResult transactionResult = await marketplace.BuyListing(tokenId, 1);
+            Debug.Log("Success! You have a new NFT" );
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log(e);
+        }
+
+        /*
+        // claim
+        var canClaim = await contractEditionDrop.ERC1155.claimConditions.CanClaim(tokenId, 1);
+        if (canClaim)
+        {
+            try
+            {
+                var result = await contractEditionDrop.ERC1155.Claim(tokenId, 1);
+                var newSupply = await contractEditionDrop.ERC1155.TotalSupply(tokenId);
+                Debug.Log("Claim successful! New supply: " + newSupply);
+            }
+            catch (System.Exception e)
+            {
+                //fluxxText.GetComponent<TMPro.TextMeshProUGUI>().text = "Claim Failed: " + e.Message;
+            }
+        }
+        else
+        {
+            Debug.Log("Can't claim at the moment");
+            //fluxxText.GetComponent<TMPro.TextMeshProUGUI>().text = "Can't claim";
+        }
+        */
     }
 
     // Switching Network
@@ -290,7 +331,6 @@ public class Prefab_ConnectWallet : MonoBehaviour
     }
 
     // UI
-
     public void OnClickDropdown()
     {
         if (String.IsNullOrEmpty(address))
@@ -326,7 +366,6 @@ public class Prefab_ConnectWallet : MonoBehaviour
     }
 
     // Utility
-
     WalletProvider GetWalletProvider(Wallet _wallet)
     {
         switch (_wallet)
