@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9e0874fd8dec94d89407c74ca860e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRate: 1
+  timeRate: 0.025
   day: 1
   defaultFogColor: {r: 0, g: 0, b: 0, a: 0}
   directionalLight: {fileID: 300106542}
