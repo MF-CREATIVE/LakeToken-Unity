@@ -17,10 +17,15 @@ public class TestPlayerController : NetworkBehaviour {
     [SerializeField] public string WalkLeftAnimationName = "Walk_Left";
     [SerializeField] public string WalkRightAnimationName = "Walk_Right";
     [SerializeField] public string IdleAnimationName = "Fishing_Idle";
+    [SerializeField] public string SittingAnimationName = "Sitting_Idle";
 
     private CharacterController _cController;
 
+    public Vector3 SpawnPos;
+    bool DrivingBoat = false;
 	private void Start() {
+        SpawnPos = transform.position;
+
 		_camera = GetComponentInChildren<Camera>().transform;
 
 		if (!isLocalPlayer) {
@@ -52,13 +57,16 @@ public class TestPlayerController : NetworkBehaviour {
 	}
 
 	private void UpdateMovement() {
-		Vector2 inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-		inputDir.Normalize();
+        if (!DrivingBoat)
+        {
+            Vector2 inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            inputDir.Normalize();
 
-		Vector3 velocity = transform.forward * inputDir.y + transform.right * inputDir.x;
-		velocity *= Input.GetKey(KeyCode.LeftShift) ? _runSpeed : _walkSpeed;
-        velocity.y = Physics.gravity.y/10;
-		_cController.Move(velocity * Time.fixedDeltaTime);
+            Vector3 velocity = transform.forward * inputDir.y + transform.right * inputDir.x;
+            velocity *= Input.GetKey(KeyCode.LeftShift) ? _runSpeed : _walkSpeed;
+            velocity.y = Physics.gravity.y / 10;
+            _cController.Move(velocity * Time.fixedDeltaTime);
+        }
 	}
 
     private void Update()
@@ -70,6 +78,7 @@ public class TestPlayerController : NetworkBehaviour {
             bool isWalkingLeft = false;
             bool isWalkingRight = false;
 
+            if (DrivingBoat) { return; }
             //Walk Forward
             if (Input.GetButton("Walk") & isWalkingBackward == false & isWalkingLeft == false & isWalkingRight == false)
             {
@@ -118,9 +127,20 @@ public class TestPlayerController : NetworkBehaviour {
                 isWalkingRight = false;
                 this.GetComponent<Animator>().Play(IdleAnimationName);
             }
+            if(transform.position.y < -2)
+            {
+                transform.position = SpawnPos;
+            }
         }
     }
-
+    public void SetStateSitting(bool TrueFalse)
+    {
+        if (isLocalPlayer)
+        {
+            DrivingBoat = TrueFalse;
+            this.GetComponent<Animator>().Play(SittingAnimationName);
+        }
+    }
     private void FixedUpdate() {
 		UpdateMouse();
 		UpdateMovement();
