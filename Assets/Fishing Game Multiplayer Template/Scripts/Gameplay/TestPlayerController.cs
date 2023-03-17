@@ -20,7 +20,6 @@ public class TestPlayerController : NetworkBehaviour {
     [SerializeField] public string SittingAnimationName = "Sitting_Idle";
 
     private CharacterController _cController;
-
     public Vector3 SpawnPos;
     bool DrivingBoat = false;
 	private void Start() {
@@ -126,9 +125,11 @@ public class TestPlayerController : NetworkBehaviour {
                 isWalkingRight = false;
                 this.GetComponent<Animator>().Play(IdleAnimationName);
             }
-            if(transform.position.y < -2)
+            if (transform.position.y <= -2)
             {
+                // Teleport the player to the spawn position
                 transform.position = SpawnPos;
+                _cController.slopeLimit = 180f;
             }
         }
     }
