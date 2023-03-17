@@ -25,7 +25,6 @@ public class TestPlayerController : NetworkBehaviour {
     bool DrivingBoat = false;
 	private void Start() {
         SpawnPos = transform.position;
-
 		_camera = GetComponentInChildren<Camera>().transform;
 
 		if (!isLocalPlayer) {

@@ -84,9 +84,13 @@ public class EquipmentItem : MonoBehaviour
     private void Update()
     {
         //Force size to 0.555277
-        if (this.GetComponent<RectTransform>().localScale.x != 0.555277)
+        RectTransform rectTransform = this.GetComponent<RectTransform>();
+        if (rectTransform != null)
         {
-            this.GetComponent<RectTransform>().localScale = new Vector3(0.555277f, 0.555277f, 0.555277f);
+            if (this.GetComponent<RectTransform>().localScale.x != 0.555277)
+            {
+                this.GetComponent<RectTransform>().localScale = new Vector3(0.555277f, 0.555277f, 0.555277f);
+            }
         }
     }
 }
