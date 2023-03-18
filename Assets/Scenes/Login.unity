@@ -5245,7 +5245,7 @@ PrefabInstance:
     - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
         type: 3}
       propertyPath: walletButtons.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
         type: 3}
@@ -5255,18 +5255,35 @@ PrefabInstance:
     - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
         type: 3}
       propertyPath: supportedWallets.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
         type: 3}
       propertyPath: supportedWallets.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
+        type: 3}
+      propertyPath: supportedWallets.Array.data[1]
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
         type: 3}
       propertyPath: walletButtons.Array.data[0].icon
       value: 
+      objectReference: {fileID: 21300000, guid: 217680bfb64fc074392309113986a3ee,
+        type: 3}
+    - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
+        type: 3}
+      propertyPath: walletButtons.Array.data[1].icon
+      value: 
       objectReference: {fileID: 21300000, guid: 3e92fa75bd5ab3047974f1a4f9dc4832,
+        type: 3}
+    - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
+        type: 3}
+      propertyPath: walletButtons.Array.data[2].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 217680bfb64fc074392309113986a3ee,
         type: 3}
     - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
         type: 3}
@@ -5281,7 +5298,17 @@ PrefabInstance:
     - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
         type: 3}
       propertyPath: walletButtons.Array.data[0].wallet
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
+        type: 3}
+      propertyPath: walletButtons.Array.data[1].wallet
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
+        type: 3}
+      propertyPath: walletButtons.Array.data[2].wallet
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
         type: 3}
@@ -5299,7 +5326,17 @@ PrefabInstance:
         type: 3}
       propertyPath: walletButtons.Array.data[0].walletButton
       value: 
+      objectReference: {fileID: 2037757550}
+    - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
+        type: 3}
+      propertyPath: walletButtons.Array.data[1].walletButton
+      value: 
       objectReference: {fileID: 1010400982}
+    - target: {fileID: 1335404546467394145, guid: a6218c0a90161f349bc6bc87fbc624da,
+        type: 3}
+      propertyPath: walletButtons.Array.data[2].walletButton
+      value: 
+      objectReference: {fileID: 2037757550}
     - target: {fileID: 1335404546759128317, guid: a6218c0a90161f349bc6bc87fbc624da,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6696,6 +6733,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028450014}
   m_CullTransparentMesh: 1
+--- !u!1 &2037757550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1335404546759128316, guid: a6218c0a90161f349bc6bc87fbc624da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1576588042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054654558
 GameObject:
   m_ObjectHideFlags: 0
