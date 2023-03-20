@@ -314,7 +314,7 @@ public class Inventory : NetworkBehaviour
             InventoryCanvas.GetComponent<Animator>().ResetTrigger("FadeIn");
             InventoryCanvas.GetComponent<Animator>().SetTrigger("FadeOut");
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

@@ -71,7 +71,7 @@ public class Manager : MonoBehaviour
         {
             Menu.SetActive(false);
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Mirror;
-
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 public class TestPlayerController : NetworkBehaviour {
 
 	private Transform _camera;
@@ -9,6 +10,8 @@ public class TestPlayerController : NetworkBehaviour {
 	[SerializeField] private float _mouseSensitivity;
 
 	private float _cameraPitch;
+
+    public GameObject AIChatCanvas;
 
 	[SerializeField] public float _walkSpeed;
 	[SerializeField] public float _runSpeed;
@@ -32,14 +35,15 @@ public class TestPlayerController : NetworkBehaviour {
 			Destroy(this);
 		}
 
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Confined;
+		Cursor.visible = true;
 
 		_cController = GetComponent<CharacterController>();
 	}
 
 	private void UpdateMouse() {
 
+        if (AIChatCanvas.activeInHierarchy) { canRotateCamera = false; } else { canRotateCamera = true; }
         if(canRotateCamera == true)
         {
             Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
@@ -55,6 +59,18 @@ public class TestPlayerController : NetworkBehaviour {
 	}
 
 	private void UpdateMovement() {
+
+        if (AIChatCanvas.activeInHierarchy) { return; }
+        if (AIChatCanvas.gameObject.activeInHierarchy)
+        {
+            InputField inputField = AIChatCanvas.GetComponentInChildren<InputField>();
+            if (inputField != null && inputField.gameObject.activeInHierarchy)
+            {
+                inputField.Select();
+                inputField.ActivateInputField();
+            }
+        }
+       
         if (!DrivingBoat)
         {
             Vector2 inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));

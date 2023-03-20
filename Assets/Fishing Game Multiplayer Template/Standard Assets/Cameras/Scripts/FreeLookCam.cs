@@ -31,7 +31,7 @@ namespace UnityStandardAssets.Cameras
         {
             base.Awake();
             // Lock or unlock the cursor.
-            Cursor.lockState = m_LockCursor ? CursorLockMode.Locked : CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = !m_LockCursor;
 			m_PivotEulers = m_Pivot.rotation.eulerAngles;
 
@@ -45,7 +45,7 @@ namespace UnityStandardAssets.Cameras
             HandleRotationMovement();
             if (m_LockCursor && Input.GetMouseButtonUp(0))
             {
-                Cursor.lockState = m_LockCursor ? CursorLockMode.Locked : CursorLockMode.None;
+                Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = !m_LockCursor;
             }
         }

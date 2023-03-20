@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0447596b1a67de49ba5720fda0bdabe, type: 3}
+  m_Name: Karen Fish Lou-ver
+  m_EditorClassIdentifier: 
+  characterName: Karen Fish Lou-ver
+  brain: workspaces/laketoken/characters/karen_fish_lou-ver
+  avatar: {fileID: 919132149155446097, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
+  workspace: workspaces/laketoken
+  currentScene: workspaces/laketoken/characters/karen_fish_lou-ver
+  ownerShip: 1
+  defaultThumbnail: {fileID: 2800000, guid: 63587c5f9852a034c82aec4c5bf43a96, type: 3}
+  index: 0
+  triggers:
+  - 
+  scenes:
+  - workspaces/laketoken/scenes/JaysLevel
+  modelUri: 
+  posUri: 
+  previewImgUri: 
+  characterID: a897c7f6-c5e7-47e3-a17a-0a5c7d974661
