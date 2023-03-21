@@ -12,9 +12,9 @@ Take a look at our Miro board to see more about Lake Token and get an idea of wh
 
 ➡️ What it does We wanted to make a game that offers a place to relax, socialize, catch some Web3 fish and have endless fun.
 
-➡️ How we built it We built it using Unity, Blender, and coordinated with Discord and Miro. We implemented Thirdweb's Unity SDKs and then used the Artic network, as it is EVM compatible, to host our game on the testnet.
+➡️ How we built it We built it using Unity, Blender, and coordinated with Discord and Miro. We implemented Thirdweb's Unity SDKs and then intend to use the Artic network, as it is EVM compatible, to host our game on the testnet.
 
-➡️ Challenges we ran into Cooperation, communication, and a lack of Unity developers. We learned as we went and gave it our best efforts. Also, the Artic network was down on the day we submitted our project, so we used the POLYGON testnet until the Artic network was back up and running.
+➡️ Challenges we ran into Cooperation, communication, and a lack of Unity developers. We learned as we went and gave it our best efforts. We unfortunately have been unable to implement the Artic testnet due to technical issues with it's blockchain, so for now we have opted to proceed with using Polygon.
 
 ➡️ What we learned We learned a lot about teamwork and having the right team members to complete the tasks required to build a Web3 game. We are happy with our final submitted project as we added new team members in the last week with the skill set required to get the game completed.
 
