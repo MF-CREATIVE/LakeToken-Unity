@@ -3188,7 +3188,7 @@ PrefabInstance:
     - target: {fileID: 6603866203489005065, guid: 6f3c9c9fc013dae46b715679dc31cce3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.76
+      value: 6.61
       objectReference: {fileID: 0}
     - target: {fileID: 6603866203489005065, guid: 6f3c9c9fc013dae46b715679dc31cce3,
         type: 3}
@@ -3234,6 +3234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boat_3 RideOn (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603866203489005173, guid: 6f3c9c9fc013dae46b715679dc31cce3,
+        type: 3}
+      propertyPath: _RotationSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f3c9c9fc013dae46b715679dc31cce3, type: 3}
