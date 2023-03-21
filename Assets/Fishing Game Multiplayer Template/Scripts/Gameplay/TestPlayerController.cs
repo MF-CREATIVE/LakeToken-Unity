@@ -49,11 +49,15 @@ public class TestPlayerController : NetworkBehaviour {
             Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             mouseDelta /= Screen.dpi;
             mouseDelta *= 100f;
-
+            
+            float smoothingFactor = 5f;
             _cameraPitch -= mouseDelta.y * _mouseSensitivity;
             _cameraPitch = Mathf.Clamp(_cameraPitch, -90f, 32f);
+            Quaternion targetRotation = Quaternion.Euler(0f, _mouseSensitivity * 3f * mouseDelta.x, 0f) * transform.rotation;
 
-            transform.Rotate(_mouseSensitivity * mouseDelta.x * Vector3.up);
+            // Interpolate between the current rotation and the target rotation over time
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * smoothingFactor);
+
             _camera.localEulerAngles = Vector3.right * _cameraPitch;
         }
 	}
@@ -66,8 +70,11 @@ public class TestPlayerController : NetworkBehaviour {
             InputField inputField = AIChatCanvas.GetComponentInChildren<InputField>();
             if (inputField != null && inputField.gameObject.activeInHierarchy)
             {
-                inputField.Select();
-                inputField.ActivateInputField();
+                if (!inputField.isFocused)
+                {
+                    inputField.Select();
+                    inputField.ActivateInputField();
+                }
             }
         }
        

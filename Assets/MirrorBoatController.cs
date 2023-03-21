@@ -42,11 +42,11 @@ public class MirrorBoatController : NetworkBehaviour
         if (_InUse && _Rider != null && _Rider.isLocalPlayer)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
-            _inputDirection = new Vector3(0, 0, Input.GetAxis("Vertical")).normalized;
+            _inputDirection = Input.GetAxis("Vertical") * transform.forward;
             if (_inputDirection.magnitude > 0f)
             {
                 _isMoving = true;
-                _rigidbody.AddForce(transform.forward * _inputDirection.magnitude * _Acceleration * Time.fixedDeltaTime, ForceMode.Acceleration);
+                _rigidbody.AddForce(_inputDirection * _Acceleration * Time.fixedDeltaTime, ForceMode.Acceleration);
                 _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, _MaxSpeed);
             }
             else
@@ -54,15 +54,28 @@ public class MirrorBoatController : NetworkBehaviour
                 _isMoving = false;
             }
 
-            transform.Rotate(Vector3.up * horizontalInput * _RotationSpeed);
-           
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            {
+                _rigidbody.AddTorque(Vector3.up * horizontalInput * _RotationSpeed, ForceMode.Force);
+            }
+            float _MovingDrag = 0.7f;
+            float _DragLerpSpeed = 1f;
+            float _StoppingDrag = 1f;
+            // Smoothly transition the movement
+            if (_isMoving)
+            {
+                _rigidbody.drag = Mathf.Lerp(_rigidbody.drag, _MovingDrag, Time.fixedDeltaTime * _DragLerpSpeed);
+            }
+            else
+            {
+                _rigidbody.drag = Mathf.Lerp(_rigidbody.drag, _StoppingDrag, Time.fixedDeltaTime * _DragLerpSpeed);
+            }
         }
-        if(Action >= 0)
+        if (Action >= 0)
         {
             Action += -Time.deltaTime;
         }
     }
-
     [Command(requiresAuthority = false)]
     void CmdSetAuthority(NetworkIdentity identity)
     {

@@ -20,10 +20,9 @@ MonoBehaviour:
   ownerShip: 1
   defaultThumbnail: {fileID: 2800000, guid: 63587c5f9852a034c82aec4c5bf43a96, type: 3}
   index: 0
-  triggers:
-  - 
+  triggers: []
   scenes:
-  - workspaces/laketoken/scenes/JaysLevel
+  - workspaces/laketoken/scenes/thelake
   modelUri: 
   posUri: 
   previewImgUri: 
