@@ -3,7 +3,32 @@ guid: 44babce815cbda342aa0d8dc4ecd38c7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_baitshop_black
+    second: {fileID: 2100000, guid: 0b415b0cda767af48bf3cf68920e7846, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_baitshop_emissive
+    second: {fileID: 2100000, guid: f401282bd03e64b42b3ee04ac675d723, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_baitshop_metal
+    second: {fileID: 2100000, guid: 535e522fb49bb7343981c11374ac12f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_baitshop_primary
+    second: {fileID: 2100000, guid: b55ecc1ed58a9934e8bf1f4d8c83723f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_baitshop_secondary
+    second: {fileID: 2100000, guid: ad45c25508d31aa499d86ba8451576b6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

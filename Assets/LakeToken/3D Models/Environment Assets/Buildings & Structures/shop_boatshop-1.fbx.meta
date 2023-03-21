@@ -3,7 +3,62 @@ guid: 4e603aa3bc2a83c46b842cd855e5dab5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kayak_primary
+    second: {fileID: 2100000, guid: db4b483b7dcb61540bc861c69ff98bc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kayak_primary_green
+    second: {fileID: 2100000, guid: f532d1a14501f3941a3f1e58d05d5cd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kayak_primary_yellow
+    second: {fileID: 2100000, guid: ce79f61232d45494da9919e6fde17563, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kayak_secondary
+    second: {fileID: 2100000, guid: 87750e8e48d300647852dca92458e5f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paddle_kayak_primary
+    second: {fileID: 2100000, guid: 9c7e91a1df3ea6e4e85da503e62de01e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paddle_kayak_secondary
+    second: {fileID: 2100000, guid: 6a3fef55a9cf4a54c9d8a14711300bf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_boatshop_black
+    second: {fileID: 2100000, guid: 65d182dc20cba3b44905f5307b6b9778, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_boatshop_emissive
+    second: {fileID: 2100000, guid: 12ab4a90f0121d14e80ee478dad4d7ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_boatshop_metal
+    second: {fileID: 2100000, guid: b63d1990878cad944922e926161c4b1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_boatshop_primary
+    second: {fileID: 2100000, guid: e1bae7856c892314291f25516fe9a05d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_boatshop_secondary
+    second: {fileID: 2100000, guid: 49ed2de9240930347a9e5294a54668f0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

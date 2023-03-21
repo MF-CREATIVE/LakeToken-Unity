@@ -3,7 +3,12 @@ guid: 169dcb420fcc32f46ba2da238c7f28b1
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shop_baitshop_primary
+    second: {fileID: 2100000, guid: f2704766b916d0d4f959dc0bd996a2a6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
