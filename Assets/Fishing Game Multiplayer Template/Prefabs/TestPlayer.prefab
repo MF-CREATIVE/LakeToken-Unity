@@ -5417,6 +5417,12 @@ MonoBehaviour:
   LineEnd: {fileID: 0}
   LineEndPrefab: {fileID: 7503126641723582434, guid: 1ff32947a66c49c4cbea00ac4e16ab6a,
     type: 3}
+  LineEndPrefabs:
+  - {fileID: 7503126641723582434, guid: 1ff32947a66c49c4cbea00ac4e16ab6a, type: 3}
+  - {fileID: 7503126641723582434, guid: e1bde9ee335ee2e41bb9e396d219bca5, type: 3}
+  - {fileID: 247288206575258874, guid: 8725a396a28300e4185f176c7788e452, type: 3}
+  - {fileID: 4604453563657215023, guid: 2b256722277de1a43a717a386761c04f, type: 3}
+  - {fileID: 6850426002232395566, guid: 992237aee6aa89c4ebafa625778d85dd, type: 3}
   FloatHasChanged: 0
   Camera: {fileID: 2643130203272408290}
   CurrentSelectedFloat: 0

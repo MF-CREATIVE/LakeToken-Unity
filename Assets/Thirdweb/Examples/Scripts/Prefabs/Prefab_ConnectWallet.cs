@@ -235,7 +235,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
     public void ChangeScene()
     {
         selectedBait = 0;
-        SceneManager.LoadSceneAsync("Jays_Level");
+        SceneManager.LoadSceneAsync("Level1");
     }
 
     // Check if player already owns any of the NFTs
@@ -256,7 +256,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
             obj.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() =>
             {
                 selectedBait = st;
-                SceneManager.LoadSceneAsync("Jays_Level");
+                SceneManager.LoadSceneAsync("Level1");
             });
         }
         else

@@ -24,6 +24,7 @@ public class Inventory : NetworkBehaviour
     public GameObject LineStart;
     public GameObject LineEnd;
     public GameObject LineEndPrefab;
+    public GameObject[] LineEndPrefabs;
     GameObject SpawnedLineEndPrefab;
     [SyncVar]
     public bool FloatHasChanged = false;
@@ -73,6 +74,37 @@ public class Inventory : NetworkBehaviour
         CheckForItems();
 
         SpawnEquipment();
+        LineEndPrefab = GetSelectedLineEndPrefab(Prefab_ConnectWallet.selectedBait);
+    }
+
+    GameObject GetSelectedLineEndPrefab(int selectedBait)
+    {
+        GameObject selectedLineEndPrefab = null;
+
+        switch (selectedBait)
+        {
+            case 1:
+                selectedLineEndPrefab = LineEndPrefabs[0]; // Select the first prefab in the array
+                break;
+            case 2:
+                selectedLineEndPrefab = LineEndPrefabs[1]; // Select the second prefab in the array
+                break;
+            case 3:
+                selectedLineEndPrefab = LineEndPrefabs[2]; // Select the third prefab in the array
+                break;
+            case 4:
+                selectedLineEndPrefab = LineEndPrefabs[3]; // Select the fourth prefab in the array
+                break;
+            case 5:
+                selectedLineEndPrefab = LineEndPrefabs[4]; // Select the fifth prefab in the array
+                break;
+            // Add more cases here for other possible values of "selectedBait"
+            default:
+                Debug.LogError("Invalid selectedBait value: " + selectedBait);
+                break;
+        }
+
+        return selectedLineEndPrefab;
     }
 
     public void SetPlayerName(string PlayerN)
