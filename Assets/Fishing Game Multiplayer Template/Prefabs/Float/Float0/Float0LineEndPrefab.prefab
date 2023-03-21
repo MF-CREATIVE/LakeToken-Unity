@@ -965,8 +965,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Baits:
-  - Bait: {fileID: 6588639155478326472}
-    ID: 0
   - Bait: {fileID: 6233582453469874768}
     ID: 1
 --- !u!1 &7503126641757839519
@@ -1148,7 +1146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1111793399352184, guid: 2fd8492f02445d44ea2bd780eb1918b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4272662845305194, guid: 2fd8492f02445d44ea2bd780eb1918b9, type: 3}
       propertyPath: m_RootOrder
@@ -1233,7 +1231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1d04e3fffb7b7904685e3a4052b7454e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d04e3fffb7b7904685e3a4052b7454e, type: 3}
       propertyPath: m_RootOrder
@@ -1293,12 +1291,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d04e3fffb7b7904685e3a4052b7454e, type: 3}
---- !u!1 &6588639155478326472 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 1d04e3fffb7b7904685e3a4052b7454e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6588639155478227560}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6588639155478360296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1d04e3fffb7b7904685e3a4052b7454e,

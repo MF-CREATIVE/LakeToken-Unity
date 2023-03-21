@@ -640,9 +640,9 @@ MonoBehaviour:
   - Bait: {fileID: 893006743071408419}
     ID: 0
   - Bait: {fileID: 893006743360612910}
-    ID: 1
+    ID: 0
   - Bait: {fileID: 893006742942016468}
-    ID: 1
+    ID: 0
 --- !u!1 &247288206909168203
 GameObject:
   m_ObjectHideFlags: 0

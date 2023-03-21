@@ -920,13 +920,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Baits:
   - Bait: {fileID: 3525295586311066102}
-    ID: 1
-  - Bait: {fileID: 3525295586349136635}
-    ID: 1
-  - Bait: {fileID: 3525295584854962945}
-    ID: 1
-  - Bait: {fileID: 3526228914372689913}
     ID: 0
+  - Bait: {fileID: 3525295586349136635}
+    ID: 0
+  - Bait: {fileID: 3525295584854962945}
+    ID: 0
+  - Bait: {fileID: 3526228914372689913}
+    ID: 1
 --- !u!1 &4604453563708104522
 GameObject:
   m_ObjectHideFlags: 0

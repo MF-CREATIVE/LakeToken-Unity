@@ -73,10 +73,12 @@ public class Prefab_ConnectWallet : MonoBehaviour
     private Contract contractCollection;
     private Contract contractMarketplace;
     private Contract contractEditionDrop;
+    
     public GameObject bait0;
     public GameObject bait1;
     public GameObject bait2;
     public GameObject bait3;
+    public GameObject bait4;
     private List<NFT> owned;
 
     private void Start()
@@ -110,6 +112,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
 
         networkSwitchButton.SetActive(supportSwitchingNetwork);
         networkDropdown.SetActive(false);
+
     }
 
     // Connecting
@@ -132,8 +135,6 @@ public class Prefab_ConnectWallet : MonoBehaviour
             print($"Connected successfully to: {address}");
 
             ShowConnectedState();
-            GetAllContracts();
-            ShowMarketPlace();
         }
         catch (Exception e)
         {
@@ -170,6 +171,10 @@ public class Prefab_ConnectWallet : MonoBehaviour
     {
         disconnectedState.SetActive(false);
         connectedState.SetActive(true);
+
+        // Initialise
+        GetAllContracts();
+        ShowMarketPlace();
     }
 
     // Disconnecting
@@ -205,7 +210,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
     private void DisconnectedState()
     {
         connectedState.SetActive(false);
-        disconnectedState.SetActive(true);
+        //disconnectedState.SetActive(true);
     }
 
     private void GetAllContracts()
@@ -214,7 +219,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
         contractCollection = ThirdwebManager.Instance.SDK.GetContract("0x2eD61F881870268b4049007E4EbD49461ACe8558");
 
         // Get the Marketplace contract
-        contractMarketplace = ThirdwebManager.Instance.SDK.GetContract("0xaa545c6b2dd42a59056d17B5D7382e55e9b23216");
+        contractMarketplace = ThirdwebManager.Instance.SDK.GetContract("0xecA1439e5f50C29146E91a6bd4d70B39778C88a3");
 
         // Get the Edition Drop
         contractEditionDrop = ThirdwebManager.Instance.SDK.GetContract("0x2cD6d09a9c8f09821BB7188bf008DF529afB2D7E");
@@ -227,9 +232,10 @@ public class Prefab_ConnectWallet : MonoBehaviour
 
         //Check to see if you own an NFT from the collection
         //CheckIfOwned(bait0, owned, 6, "3");
-        CheckIfOwned(bait1, owned, 0, "0");
-        CheckIfOwned(bait2, owned, 1, "1");
-        CheckIfOwned(bait3, owned, 2, "2");
+        CheckIfOwned(bait1, owned, 0, "3");
+        CheckIfOwned(bait2, owned, 1, "5");
+        CheckIfOwned(bait3, owned, 3, "2");
+        CheckIfOwned(bait4, owned, 4, "1");
     }
 
     public void ChangeScene()
