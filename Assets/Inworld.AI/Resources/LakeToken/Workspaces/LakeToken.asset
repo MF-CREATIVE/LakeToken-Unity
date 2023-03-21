@@ -15,6 +15,7 @@ MonoBehaviour:
   title: LakeToken
   fullName: workspaces/laketoken
   characters:
+  - {fileID: 11400000, guid: 2173ee55301ef9149837f2d1dce14a96, type: 2}
   - {fileID: 11400000, guid: aeb05136ec3c725408d0436ee5dfbb8c, type: 2}
   scenes:
   - {fileID: 11400000, guid: 09fd386cad2778a4cbed4627f5637f5b, type: 2}

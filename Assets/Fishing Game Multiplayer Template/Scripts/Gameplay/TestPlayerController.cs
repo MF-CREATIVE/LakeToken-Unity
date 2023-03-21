@@ -53,7 +53,7 @@ public class TestPlayerController : NetworkBehaviour {
             float smoothingFactor = 5f;
             _cameraPitch -= mouseDelta.y * _mouseSensitivity;
             _cameraPitch = Mathf.Clamp(_cameraPitch, -90f, 32f);
-            Quaternion targetRotation = Quaternion.Euler(0f, _mouseSensitivity * mouseDelta.x, 0f) * transform.rotation;
+            Quaternion targetRotation = Quaternion.Euler(0f, _mouseSensitivity * 3f * mouseDelta.x, 0f) * transform.rotation;
 
             // Interpolate between the current rotation and the target rotation over time
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * smoothingFactor);

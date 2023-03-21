@@ -17,6 +17,7 @@ MonoBehaviour:
   description: this is where people come to fish but karen hates them all
   characters:
   - workspaces/laketoken/characters/karen_fish_lou-ver
+  - workspaces/laketoken/characters/big_jim
   triggers:
   - workspaces/laketoken/triggers/chat
   index: 0
