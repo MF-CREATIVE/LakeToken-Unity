@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Big Jim
   brain: workspaces/laketoken/characters/big_jim
-  avatar: {fileID: 0}
+  avatar: {fileID: 919132149155446097, guid: 177ad3802066fc04f9e938dafa6ddadf, type: 3}
   workspace: workspaces/laketoken
   currentScene: workspaces/laketoken/characters/big_jim
   ownerShip: 0
@@ -26,4 +26,4 @@ MonoBehaviour:
   modelUri: 
   posUri: 
   previewImgUri: 
-  characterID: 
+  characterID: fdc8edc1-8549-46e6-8a19-e758c2372f22
