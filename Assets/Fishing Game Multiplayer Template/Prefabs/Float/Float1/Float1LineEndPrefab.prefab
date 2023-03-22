@@ -932,9 +932,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Baits:
-  - Bait: {fileID: 3402796010383484753}
-    ID: 0
   - Bait: {fileID: 4706027385900719799}
+    ID: 0
+  - Bait: {fileID: 3402796010383484753}
     ID: 1
 --- !u!1 &7503126641757839519
 GameObject:

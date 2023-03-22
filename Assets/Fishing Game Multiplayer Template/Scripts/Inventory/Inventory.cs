@@ -66,6 +66,8 @@ public class Inventory : NetworkBehaviour
 
         SetPlayerName(PlayerName);
 
+        LineEndPrefab = GetSelectedLineEndPrefab(Prefab_ConnectWallet.selectedBait);
+
         SetUpFloat();
 
         if (!isLocalPlayer)
@@ -74,33 +76,37 @@ public class Inventory : NetworkBehaviour
         CheckForItems();
 
         SpawnEquipment();
-        LineEndPrefab = GetSelectedLineEndPrefab(Prefab_ConnectWallet.selectedBait);
+        
     }
 
     GameObject GetSelectedLineEndPrefab(int selectedBait)
     {
+        Debug.Log("Selected bait is: " + selectedBait);
         GameObject selectedLineEndPrefab = null;
+        CurrentSelectedFloat = selectedBait;
 
         switch (selectedBait)
         {
-            case 1:
+            case 0:
                 selectedLineEndPrefab = LineEndPrefabs[0]; // Select the first prefab in the array
                 break;
-            case 2:
+            case 1:
                 selectedLineEndPrefab = LineEndPrefabs[1]; // Select the second prefab in the array
                 break;
-            case 3:
+            case 2:
                 selectedLineEndPrefab = LineEndPrefabs[2]; // Select the third prefab in the array
                 break;
-            case 4:
+            case 3:
                 selectedLineEndPrefab = LineEndPrefabs[3]; // Select the fourth prefab in the array
                 break;
-            case 5:
+            case 4:
                 selectedLineEndPrefab = LineEndPrefabs[4]; // Select the fifth prefab in the array
                 break;
             // Add more cases here for other possible values of "selectedBait"
             default:
+                //selectedLineEndPrefab = LineEndPrefab;
                 Debug.LogError("Invalid selectedBait value: " + selectedBait);
+                CurrentSelectedFloat = 0;
                 break;
         }
 

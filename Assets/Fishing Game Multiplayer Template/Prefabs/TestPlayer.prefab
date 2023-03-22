@@ -5444,6 +5444,30 @@ MonoBehaviour:
     ID: 1
     Name: Float 1
     Image: {fileID: 21300000, guid: f79f52fcfb787af4181a662f61d1433e, type: 3}
+  - InventorySystem: {fileID: 4905120567770436955}
+    FloatPrefab: {fileID: 417328383077362676, guid: 39062fb6e7d1b8146a7f5524aead71dd,
+      type: 3}
+    LineEndPrefab: {fileID: 247288206575258874, guid: 8725a396a28300e4185f176c7788e452,
+      type: 3}
+    ID: 2
+    Name: Float 2
+    Image: {fileID: 21300000, guid: f79f52fcfb787af4181a662f61d1433e, type: 3}
+  - InventorySystem: {fileID: 4905120567770436955}
+    FloatPrefab: {fileID: 417328383077362676, guid: 8ac9310dbf9f9af418c18e62ee881a56,
+      type: 3}
+    LineEndPrefab: {fileID: 247288206575258874, guid: 8725a396a28300e4185f176c7788e452,
+      type: 3}
+    ID: 3
+    Name: Float 3
+    Image: {fileID: 21300000, guid: f79f52fcfb787af4181a662f61d1433e, type: 3}
+  - InventorySystem: {fileID: 4905120567770436955}
+    FloatPrefab: {fileID: 417328383077362676, guid: ef07134c1fa6d3f428c9a8f033b05924,
+      type: 3}
+    LineEndPrefab: {fileID: 6850426002232395566, guid: 992237aee6aa89c4ebafa625778d85dd,
+      type: 3}
+    ID: 4
+    Name: Float 4
+    Image: {fileID: 21300000, guid: f79f52fcfb787af4181a662f61d1433e, type: 3}
   FloatContent: {fileID: 4797597381712249627}
   FloatSelectionMenu: {fileID: 4556431241463996923}
   CurrentSelectedFloatImage: {fileID: 2063370353}

@@ -966,7 +966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Baits:
   - Bait: {fileID: 6233582453469874768}
-    ID: 1
+    ID: 0
 --- !u!1 &7503126641757839519
 GameObject:
   m_ObjectHideFlags: 0
