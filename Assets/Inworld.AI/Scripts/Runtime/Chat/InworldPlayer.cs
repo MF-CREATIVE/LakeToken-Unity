@@ -49,6 +49,7 @@ namespace Inworld.Sample
                 return;
             InworldController.Instance.CurrentCharacter.SendText(m_InputField.text);
             m_InputField.text = null;
+            m_GlobalChatCanvas.SetActive(!m_GlobalChatCanvas.activeSelf);
         }
         public void BackToLobby()
         {
@@ -71,8 +72,8 @@ namespace Inworld.Sample
         }
         void Update()
         {
-            if (Input.GetKeyUp(KeyCode.BackQuote))
-            {
+            if (Input.GetKeyDown(KeyCode.Return) && !m_GlobalChatCanvas.activeInHierarchy)
+            { 
                 m_GlobalChatCanvas.SetActive(!m_GlobalChatCanvas.activeSelf);
                 if (m_CameraController)
                     m_CameraController.enabled = !m_GlobalChatCanvas.activeSelf;

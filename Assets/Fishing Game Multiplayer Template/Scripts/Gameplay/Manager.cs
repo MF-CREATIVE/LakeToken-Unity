@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Mirror;
 public class Manager : MonoBehaviour
 {
     public GameObject Menu;
@@ -25,6 +25,7 @@ public class Manager : MonoBehaviour
 
     public GameObject BuildGameInfo;
 
+    public GameObject InGameChatSystem;
     private void Start()
     {
         ToggleNetworkManager();
@@ -61,17 +62,41 @@ public class Manager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T))
+        // Check if the in-game chat system is null and the local connection is not null
+        if (InGameChatSystem == null && NetworkServer.localConnection != null)
         {
-            Menu.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-        if(Input.GetKeyUp(KeyCode.T))
-        {
-            Menu.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.None;
+            // Get the player's game object
+            GameObject playerObject = NetworkServer.localConnection?.identity?.gameObject;
+
+            // If the player object exists, try to get the Inventory component
+            if (playerObject != null)
+            {
+                Inventory inv = playerObject.GetComponent<Inventory>();
+
+                // If the Inventory component exists, try to get the InWorldChatSystem game object
+                if (inv != null && inv.InWorldChatSystem != null)
+                {
+                    GameObject inWorldChatSystemObject = inv.InWorldChatSystem.gameObject;
+
+                    // If the InWorldChatSystem game object exists, toggle the menu based on user input
+                    if (inWorldChatSystemObject != null)
+                    {
+                        if (Input.GetKeyDown(KeyCode.T) && !inWorldChatSystemObject.activeInHierarchy)
+                        {
+                            Menu.SetActive(true);
+                            Cursor.visible = true;
+                            Cursor.lockState = CursorLockMode.None;
+                        }
+
+                        if (Input.GetKeyUp(KeyCode.T) && inWorldChatSystemObject.activeInHierarchy)
+                        {
+                            Menu.SetActive(false);
+                            Cursor.visible = false;
+                            Cursor.lockState = CursorLockMode.Locked;
+                        }
+                    }
+                }
+            }
         }
     }
 

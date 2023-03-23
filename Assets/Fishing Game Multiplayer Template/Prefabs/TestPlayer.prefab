@@ -5198,6 +5198,7 @@ GameObject:
   - component: {fileID: 4905120567770436955}
   - component: {fileID: 4082502706873331834}
   - component: {fileID: -2084240219655893729}
+  - component: {fileID: 230917573315347371}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Player
@@ -5510,6 +5511,7 @@ MonoBehaviour:
   Manager: {fileID: 0}
   PlayerName: 
   PlayerNameText: {fileID: 5544852850780474640}
+  InWorldChatSystem: {fileID: 4492102630385934984}
 --- !u!81 &4082502706873331834
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5614,6 +5616,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &230917573315347371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643130202294811684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a9b83c049a50a498f6788ca72e9566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AutoStart: 0
+  m_Data: {fileID: 0}
+  m_InworldPlayer: {fileID: 0}
+  m_Capture: {fileID: 0}
 --- !u!1 &2643130202510283254
 GameObject:
   m_ObjectHideFlags: 0

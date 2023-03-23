@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 300106542}
-  m_IndirectSpecularColor: {r: 0.18028396, g: 0.22571427, b: 0.30692327, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028381, g: 0.22571398, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2014,7 +2014,7 @@ PrefabInstance:
     - target: {fileID: 4248716694280939042, guid: d22bd8b2bca97c14295d2f6d73499a8a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4642585711620351756, guid: d22bd8b2bca97c14295d2f6d73499a8a,
         type: 3}
@@ -3750,6 +3750,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4180159687470645012, guid: 177ad3802066fc04f9e938dafa6ddadf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 4841934747327422224, guid: db73fadc73683c446926db943f34c640,
+        type: 3}
+    - target: {fileID: -4180159687470645012, guid: 177ad3802066fc04f9e938dafa6ddadf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 4841934747327422224, guid: db73fadc73683c446926db943f34c640,
+        type: 3}
     - target: {fileID: 919132149155446097, guid: 177ad3802066fc04f9e938dafa6ddadf,
         type: 3}
       propertyPath: m_Name
@@ -6041,6 +6053,7 @@ MonoBehaviour:
   PlayerName: 
   PlayerNameInputField: {fileID: 2108802571}
   BuildGameInfo: {fileID: 691921334}
+  InGameChatSystem: {fileID: 0}
 --- !u!4 &1089767909
 Transform:
   m_ObjectHideFlags: 0
@@ -9432,6 +9445,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1761161034}
     m_Modifications:
+    - target: {fileID: 1128614544702611233, guid: d22bd8b2bca97c14295d2f6d73499a8a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818396142677475718, guid: d22bd8b2bca97c14295d2f6d73499a8a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818396142677475718, guid: d22bd8b2bca97c14295d2f6d73499a8a,
+        type: 3}
+      propertyPath: m_CustomModel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4248716694280939042, guid: d22bd8b2bca97c14295d2f6d73499a8a,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -9501,6 +9529,11 @@ PrefabInstance:
     - target: {fileID: 5640325391487457652, guid: d22bd8b2bca97c14295d2f6d73499a8a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780226317054875630, guid: d22bd8b2bca97c14295d2f6d73499a8a,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6301156355025034122, guid: d22bd8b2bca97c14295d2f6d73499a8a,
@@ -10446,6 +10479,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InworldController_Karen
+      objectReference: {fileID: 0}
+    - target: {fileID: 209271200670505241, guid: bef69608b56b9a24fa0a2c356fae0b74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 209271200670505247, guid: bef69608b56b9a24fa0a2c356fae0b74,
         type: 3}

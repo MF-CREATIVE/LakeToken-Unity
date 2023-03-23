@@ -59,6 +59,8 @@ public class Inventory : NetworkBehaviour
     public string PlayerName;
     public Text PlayerNameText;
 
+    public GameObject InWorldChatSystem;
+
     private void Start()
     {
         Manager = GameObject.FindGameObjectWithTag("Manager");
@@ -338,7 +340,7 @@ public class Inventory : NetworkBehaviour
         if (!isLocalPlayer)
             return;
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if(Input.GetKeyDown(KeyCode.I) && !InWorldChatSystem.activeInHierarchy)
         {
             this.GetComponent<TestPlayerController>().canRotateCamera = false;
             InventoryCanvas.GetComponent<Animator>().ResetTrigger("FadeOut");
@@ -346,7 +348,7 @@ public class Inventory : NetworkBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-        if (Input.GetKeyUp(KeyCode.I))
+        if (Input.GetKeyUp(KeyCode.I) && !InWorldChatSystem.activeInHierarchy)
         {
             this.GetComponent<TestPlayerController>().canRotateCamera = true;
             InventoryCanvas.GetComponent<Animator>().ResetTrigger("FadeIn");
